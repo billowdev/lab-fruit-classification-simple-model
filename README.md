@@ -1,4 +1,4 @@
-# Project-Image-Classification
+# Project-Fruit-Image-Classification
 Digital Image Processing
 
 
