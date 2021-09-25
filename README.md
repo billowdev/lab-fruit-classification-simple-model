@@ -9,7 +9,7 @@ https://www.analyticsvidhya.com/blog/2020/10/create-image-classification-model-p
 - https://www.kaggle.com/moltean/fruits
 - License : CC BY-SA 4.0
 
-![alt text](https://github.com/lacakp/Project-Image-Classification/blob/6b579af9c052647e67b01b461899819d89896b32/PlanProj.drawio.png)
-
+![alt text](PlanProj.drawio.png)
+<!-- ![alt text](https://github.com/lacakp/Project-Fruit-Image-Classification/blob/003fb6cc5b1a9299ecf485c90b220980e9d4e8ce/PlanProj.drawio.png) -->
 
 
