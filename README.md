@@ -6,6 +6,9 @@
 - 224x224
 - Fruit: Apple Banana and Tomato
 
+------------------------------------
+
+#### knowledge
 - MobileNet คืออะไร : Keng Surapong 2020-01-12 
 - https://www.bualabs.com/archives/3439/tensorflow-js-tutorial-build-image-classification-javascript-mobilenet-pretrained-model-tfjs-ep-7/
 
@@ -18,6 +21,7 @@
 - 3 วิธีในการสร้างโมเดล Machine Learning ด้วย Keras และ TensorFlow 2.0 : ICHI.PRO
 - https://ichi.pro/th/3-withi-ni-kar-srang-model-machine-learning-dwy-keras-laea-tensorflow-2-0-244131078796499
 
+------------------------------------
 
 #### Create your Own Image Classification Model using Python and Keras
 https://www.analyticsvidhya.com/blog/2020/10/create-image-classification-model-python-keras/
