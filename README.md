@@ -1,5 +1,5 @@
 # Project-Fruit-Image-Classification
-- Digital Image Processing Project
+### Digital Image Processing Project
 
 ### Transfer Learning
 - MobileNetV2 : Efficient Convolutional Neural Networks for Mobile Vision Applications
