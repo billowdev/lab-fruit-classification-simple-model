@@ -1,6 +1,10 @@
 # Project-Fruit-Image-Classification
-Digital Image Processing
+- Digital Image Processing Project
 
+### Transfer Learning
+- MobileNetV2
+- 224x224
+- Apple Banana and Tomato
 
 #### Create your Own Image Classification Model using Python and Keras
 https://www.analyticsvidhya.com/blog/2020/10/create-image-classification-model-python-keras/
