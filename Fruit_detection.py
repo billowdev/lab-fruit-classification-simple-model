@@ -3,13 +3,9 @@ from keras.models import load_model
 import numpy as np
 import cv2
 
-
 model=load_model("./AppleBananaTomato")
 
 cap = cv2.VideoCapture(0)
-
-# https://github.com/steubs/BananaClassifier
-
 
 while True:
 	ret, frame = cap.read()
@@ -77,12 +73,12 @@ while True:
 	if len(redcnts)>0:
 		red_area = max(redcnts, key=cv2.contourArea)
 		(xg,yg,wg,hg) = cv2.boundingRect(red_area)
-		cv2.rectangle(frame,(xg,yg),(xg+wg, yg+hg),(0,255,0),2)
+		cv2.rectangle(frame,(xg,yg),(xg+wg, yg+hg),(255,0,0),2)
 
 	if len(yellowcnts)>0:
 		yellow_area = max(yellowcnts, key=cv2.contourArea)
 		(xg,yg,wg,hg) = cv2.boundingRect(yellow_area)
-		cv2.rectangle(frame,(xg,yg),(xg+wg, yg+hg),(0,255,0),2)
+		cv2.rectangle(frame,(xg,yg),(xg+wg, yg+hg),(255,0,0),2)
 
 		# print("\n\n Not Found")
 
