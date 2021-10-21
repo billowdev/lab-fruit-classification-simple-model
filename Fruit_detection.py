@@ -5,7 +5,7 @@ import cv2
 
 model=load_model("./abtmodel")
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(2)
 
 while True:
 	ret, frame = cap.read()
