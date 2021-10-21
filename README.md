@@ -27,10 +27,25 @@
 https://www.analyticsvidhya.com/blog/2020/10/create-image-classification-model-python-keras/
 
 #### Datasets
-- https://www.kaggle.com/moltean/fruits
-- License : CC BY-SA 4.0
+- Fruits 360 : __https://www.kaggle.com/moltean/fruits__ 
+
+- A dataset with 90380 images of 131 fruits and vegetables
+
+- <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" scale="0">
+
+- This work is licensed under a 
+<a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
 
 
-![alt text](https://github.com/lacakp/Project-Fruit-Image-Classification/Images/blob/f6cd437612b9195b1dd6e429e466cf1c281bcabb/DIP.png)
-![alt text](https://github.com/lacakp/Project-Fruit-Image-Classification/Images/blob/004fe497ee99218f004f959b7dabde7960c04460/ML.png)
+- Fruit and Vegetable Image Recognition 
+- https://www.kaggle.com/kritikseth/fruit-and-vegetable-image-recognition
+
+- CC0: Public Domain
+
+- RAGHAV R POTDAR
+and 3 collaborators
+- License
+CC0: Public Domain
+- https://www.kaggle.com/raghavrpotdar/fresh-and-stale-images-of-fruits-and-vegetables
+
 
