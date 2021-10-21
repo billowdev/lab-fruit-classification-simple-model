@@ -3,7 +3,7 @@ from keras.models import load_model
 import numpy as np
 import cv2
 
-model=load_model("./AppleBananaTomato")
+model=load_model("./abtmodel")
 
 cap = cv2.VideoCapture(0)
 
