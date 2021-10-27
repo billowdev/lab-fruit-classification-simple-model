@@ -1,0 +1,28 @@
+for red color
+	lower_apple_red = np.array([150, 153, 153])
+	upper_apple_red = np.array([180, 255, 255])
+	lower_apple_raw = np.array([0, 150, 150])
+	upper_apple_raw = np.array([15, 255, 255])
+
+	apple_upper = np.array([156,48,38])
+	apple_lower = np.array([148,87,82])
+
+
+
+## These range below are Ok
+https://stackoverflow.com/questions/58353513/detecting-apple-by-thresholding
+
+lower_1 = np.array([0,50,20])
+upper_1 = np.array([80,255,255])
+mask1 = cv2.inRange(hsv, lower_1, upper_1)
+
+lower_2 = np.array([160,50,20])
+upper_2 = np.array([179,255,255])
+mask2 = cv2.inRange(hsv, lower_2, upper_2)
+
+
+## Yellow Range
+https://stackoverflow.com/questions/57262974/tracking-yellow-color-object-with-opencv-python
+
+lower = np.array([22, 93, 0])
+upper = np.array([45, 255, 255])
