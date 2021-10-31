@@ -27,7 +27,13 @@
 https://www.analyticsvidhya.com/blog/2020/10/create-image-classification-model-python-keras/
 
 #### Datasets
-- Fruits 360 : __https://www.kaggle.com/moltean/fruits__ 
+#### Split 3 class (apple, banana, tomato) 1000 image for each classes from Fruits 360
+- https://github.com/lacakp/fruit-ds
+
+
+[Fruit and Vegetable Image Recognition](https://www.kaggle.com/kritikseth/fruit-and-vegetable-image-recognition)
+
+[Fruits 360](https://www.kaggle.com/moltean/fruits)
 
 - A dataset with 90380 images of 131 fruits and vegetables
 
@@ -37,15 +43,15 @@ https://www.analyticsvidhya.com/blog/2020/10/create-image-classification-model-p
 <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
 
 
-- Fruit and Vegetable Image Recognition 
-- https://www.kaggle.com/kritikseth/fruit-and-vegetable-image-recognition
 
-- CC0: Public Domain
+# prediction test image
 
-- RAGHAV R POTDAR
-and 3 collaborators
-- License
-CC0: Public Domain
-- https://www.kaggle.com/raghavrpotdar/fresh-and-stale-images-of-fruits-and-vegetables
+<img src="Document/prediction/prediction-data_page-0001.jpg" />
+
+<img src="Document/prediction/prediction-data_page-0002.jpg" />
+
+<img src="Document/prediction/prediction-data_page-0003.jpg" />
+
+<img src="Document/prediction/prediction-data_page-0004.jpg" />
 
 
