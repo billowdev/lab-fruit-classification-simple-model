@@ -40,12 +40,15 @@ https://www.analyticsvidhya.com/blog/2020/10/create-image-classification-model-p
 - Fruit and Vegetable Image Recognition 
 - https://www.kaggle.com/kritikseth/fruit-and-vegetable-image-recognition
 
-- CC0: Public Domain
 
-- RAGHAV R POTDAR
-and 3 collaborators
-- License
-CC0: Public Domain
-- https://www.kaggle.com/raghavrpotdar/fresh-and-stale-images-of-fruits-and-vegetables
+# prediction test image
+
+<img src="Document/prediction/prediction-data_page-0001.jpg" />
+
+<img src="Document/prediction/prediction-data_page-0002.jpg" />
+
+<img src="Document/prediction/prediction-data_page-0003.jpg" />
+
+<img src="Document/prediction/prediction-data_page-0004.jpg" />
 
 
