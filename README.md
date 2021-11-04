@@ -55,3 +55,10 @@ https://www.analyticsvidhya.com/blog/2020/10/create-image-classification-model-p
 <img src="Document/prediction/prediction-data_page-0004.jpg" />
 
 
+
+
+
+<!-- 
+jpynb to html
+%%shell
+jupyter nbconvert --to html /content/abt_model_mobileNetV2.ipynb -->
