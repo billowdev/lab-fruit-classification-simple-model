@@ -2,8 +2,27 @@ import tensorflow as tf
 from keras.models import load_model
 import numpy as np
 import cv2
+from keras import Model
+from keras.layers import Dense
 
-abt_model = load_model("Model\custom_abtmodel")
+# Custom model
+abt_model = load_model('Model/apple_banana_tomato_model')
+
+abt_output = Dense(3, activation='softmax')
+abt_output = abt_output(abt_model.layers[-2].output)
+
+abt_input = abt_model.input
+abt_model = Model(inputs=abt_input, outputs=abt_output)
+
+for layer in abt_model.layers[:-1]:
+  layer.trainable = False
+
+# Compile Model
+abt_model.compile(
+    loss='sparse_categorical_crossentropy',
+    optimizer='adam',
+    metrics=['accuracy']
+)
 
 cap = cv2.VideoCapture(0)
 
