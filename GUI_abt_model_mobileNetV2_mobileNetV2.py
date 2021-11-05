@@ -1,29 +1,32 @@
-from ctypes import windll
-from tkinter import *
-from tkinter import filedialog
-import tkinter as tk
-import os
-import cv2
-from PIL import Image, ImageTk # pip install python3-pil.imagetk
-import tensorflow as tf
-from keras.models import load_model
-import numpy as np
-from contextlib import suppress
+from ctypes import windll # ใช้ในการช่วยให้ GUI ไม่เบลอ
+from tkinter import * # ส่วนของ ตัวที่ใช้ออกแบบ GUI
+from tkinter import filedialog # ส่วนที่ใช้ในการ Browse file ภาพ
+import tkinter as tk # ส่วนของ ตัวที่ใช้ออกแบบ GUI
 
-from keras import Model
-from keras.layers import Dense
+from tkinter import ttk
 
-windll.shcore.SetProcessDpiAwareness(1)
+import os # ใช้ในการเข้าถึงpath ไฟล์
+import cv2 # ใช้ในการอ่านภาพ
+from PIL import Image, ImageTk #  ใช้ในการแสดงผลภาพใน GUI
+import tensorflow as tf # ใช้สำหรับการเตรียมข้อมูลภาพ
+from keras.models import load_model # โหลดโมเดล
+import numpy as np # ใช้ในการจัดการข้อมูล array
+
+from keras import Model # ส่วนของ keras เพื่อใช้ในการ custom โมเดล
+from keras.layers import Dense # ส่วนของ keras เพื่อใช้ในการ custom โมเดล
+
+windll.shcore.SetProcessDpiAwareness(1) # ทำให้ GUI ไม่เบลอ
 
 # Custom model
-abt_model = load_model("./Model/apple_banana_tomato_model")
+abt_model = load_model("./Model/apple_banana_tomato_model") # โหลดโมเดลมา
+ 
+abt_output = Dense(3, activation='softmax') # ทำการ set เอาต์พุต เป็น 3 เลเยอร์
+abt_output = abt_output(abt_model.layers[-2].output)  
 
-abt_output = Dense(3, activation='softmax')
-abt_output = abt_output(abt_model.layers[-2].output)
+abt_input = abt_model.input # โมเดลอินพุต
+abt_model = Model(inputs=abt_input, outputs=abt_output) # ใส่ ค่า input output ไปในโมเดล
 
-abt_input = abt_model.input
-abt_model = Model(inputs=abt_input, outputs=abt_output)
-
+# ไม่ให้เทรน เลเยอร์อื่นๆ ค่าที่เป็นของ mobilenet_v2
 for layer in abt_model.layers[:-1]:
   layer.trainable = False
 
@@ -34,11 +37,10 @@ abt_model.compile(
     metrics=['accuracy']
 )
 
-gui = Tk()
-gui.title("Image Browser")
-gui.geometry("1080x650")
+gui = Tk() # เรียกใช้ tkinter ในการสร้าง gui
+gui.title("Apple Banana Tomato Prediction") # ชื่อโปรแกรม
+gui.geometry("860x650") # ขนาดโปรแกรม
 
-# input_imgage = None
 
 def show_image():
 	global fln
@@ -69,7 +71,7 @@ def abt_predict(image):
 		t0 = "ผลลัพธ์การทำนาย คือ ... Apple"
 	if label == 1:
 		t0 = "ผลลัพธ์การทำนาย คือ ... Banana"
-	else:
+	if label == 3:
 		t0 = "ผลลัพธ์การทำนาย คือ ... Tomato"
 	
 	t1 = "prediction score: Apple {:.2f} %".format(score[0]*100)
@@ -94,27 +96,26 @@ def clear_text():
 res_text = Text(gui, height = 10, width = 52)
 res_text.pack(side=BOTTOM)
 
-frm = Frame(gui)
+frm = ttk.Frame(gui)
 frm.pack(side=BOTTOM, padx=15, pady=15)
 
-lbl = Label(gui)
+lbl = ttk.Label(gui)
 lbl.pack()
 
 # Browse Image
-btn = Button(frm, text="Browse Image", command=show_image)
+btn = ttk.Button(frm, text="Browse Image", command=show_image)
 btn.pack(side=tk.LEFT, padx=10)
 
 # Prediction Button
-btn_prediction = Button(frm, text="Prediction", command=prediction)
+btn_prediction = ttk.Button(frm, text="Prediction", command=prediction)
 btn_prediction.pack(side=tk.LEFT, padx=10)
 
 # Clear Button
-btn_clear = Button(frm, text="clear", command=clear_text)
+btn_clear = ttk.Button(frm, text="clear", command=clear_text)
 btn_clear.pack(side=tk.LEFT, padx=10)
 
 # Exit Button
-btn_exit = Button(frm, text="Exit", command=lambda: exit())
+btn_exit = ttk.Button(frm, text="Exit", command=lambda: exit())
 btn_exit.pack(side=tk.LEFT, padx=10)
-
 
 gui.mainloop()
