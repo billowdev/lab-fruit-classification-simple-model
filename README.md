@@ -58,6 +58,7 @@ https://www.analyticsvidhya.com/blog/2020/10/create-image-classification-model-p
 
 
 
+[Customizing MobileNetV2 through transfer learning](https://pythontutorials.eu/deep-learning/transfer-learning/)
 
 <!-- 
 jpynb to html
