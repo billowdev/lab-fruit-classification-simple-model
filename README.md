@@ -4,7 +4,7 @@
 
 
 #### Datasets
-#### Split 3 class (apple, banana, tomato) 1000 image for each classes from Fruits 360
+#### Split 3 class (apple, banana, tomato) from Fruits 360
 - https://github.com/lacakp/fruit-ds
 
 
